@@ -1,0 +1,50 @@
+{
+    "signup": {
+        "name": "Adriano Almeida",
+        "cpf": "00000014949",
+        "email": "adriano@teste.com.br",
+        "whatsapp": "71999999999",
+        "address": {
+            "postalcode": "01218012",
+            "street": "Alameda Eduardo Prado",
+            "number": "838",
+            "complement": "Apt 86",
+            "district": "Campos Elíseos",
+            "city_state": "São Paulo/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "cpf_inv": {
+        "name": "Apolo Vale",
+        "cpf": "000000149AA",
+        "email": "apolo@teste.com.br",
+        "whatsapp": "71999999999",
+        "address": {
+            "postalcode": "01218012",
+            "street": "Alameda Eduardo Prado",
+            "number": "838",
+            "complement": "Apt 86",
+            "district": "Campos Elíseos",
+            "city_state": "São Paulo/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "email_inv": {
+        "name": "Adriano Almeida",
+        "cpf": "00000014949",
+        "email": "adrianoteste.com.br",
+        "whatsapp": "71999999999",
+        "address": {
+            "postalcode": "01218012",
+            "street": "Alameda Eduardo Prado",
+            "number": "838",
+            "complement": "Apt 86",
+            "district": "Campos Elíseos",
+            "city_state": "São Paulo/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    }
+}
