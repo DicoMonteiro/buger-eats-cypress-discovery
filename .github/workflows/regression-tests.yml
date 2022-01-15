@@ -22,11 +22,15 @@ jobs:
         cache: 'npm'
     - name: Install depencies
       run: npm install
+    - name: Clean Report
+      run: |
+        npm run report:cleanup
+        npm run video:cleanup
     - name: Run Web Tests
       run: npm run headless
       continue-on-error: true
-    - run: npm run report:merge    
-    - run: npm run report:mocha
+    - run: npm run report:merge   
+    - run: npm run report:generate
       # Relatorio
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
