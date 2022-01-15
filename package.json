@@ -10,8 +10,7 @@
     "headless-edge": "npx cypress run -b edge",
     "report:cleanup": "rm -fr cypress/report/",
     "video:cleanup": "rm -fr cypress/videos/",
-    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json",
-    "report:generate": "marge cypress/report/output.json --reportDir ./ --inline"
+    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.xml"
   },
   "author": "Adriano Almeida",
   "license": "MIT",
