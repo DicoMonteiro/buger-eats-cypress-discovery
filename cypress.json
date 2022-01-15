@@ -2,15 +2,10 @@
     "viewportWidth": 1440,
     "viewportHeight": 900,
     "baseUrl": "https://buger-eats-qa.vercel.app",
-    "reporter": "mochawesome",
+    "watchForFileChanges": true,
+    "experimentalSourceRewriting": true,
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-        "reportDir": "cypress/report/mochawesome-report",
-        "overwrite": false,
-        "html": false,
-        "json": true,
-        "timestamp": "mmddyyyy_HHMMss",
-        "reportTitle": "Report Web Tests",
-        "cdn": true,
-        "charts": true
+        "configFile": "reporter-config.json"
     }
 }
