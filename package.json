@@ -7,14 +7,24 @@
     "test": "npx cypress open",
     "headless": "npx cypress run",
     "headless-chrome": "npx cypress run -b chrome",
-    "headless-edge": "npx cypress run -b edge"
+    "headless-edge": "npx cypress run -b edge",
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:clean": "rimraf mochawesome-report index.json"
   },
   "author": "Adriano Almeida",
   "license": "MIT",
   "devDependencies": {
     "cypress": "^9.0.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^1.5.0",
     "faker": "^5.5.3",
-    "gerador-validador-cpf": "^5.0.2"
-  }
+    "gerador-validador-cpf": "^5.0.2",
+    "mocha": "^9.1.4",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {}
 }
