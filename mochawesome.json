@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-01-15T22:33:13.953Z",
-    "end": "2022-01-15T22:33:21.246Z",
-    "duration": 7293,
+    "start": "2022-01-15T22:38:20.192Z",
+    "end": "2022-01-15T22:38:27.366Z",
+    "duration": 7174,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "36452363-01ea-4635-a6d8-25692f668ce0",
+      "uuid": "d28bf77b-1c6e-4887-9643-6afc8bb4cf4d",
       "title": "",
       "fullFile": "cypress/integration/home.spec.js",
       "file": "cypress/integration/home.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a4dae8e6-c264-4288-976f-90433e048f0d",
+          "uuid": "924cc805-41cd-4708-bef0-a70caa06ac05",
           "title": "home page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "app deve estar online",
               "fullTitle": "home page app deve estar online",
               "timedOut": null,
-              "duration": 7239,
+              "duration": 7055,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "// cy.viewport(1440, 900)\n// cy.visit('https://buger-eats.vercel.app')\ncy.visit('/'); // cy.get('h1').should('have.text', 'Seja um parceiro entregador pela Buger Eats')\ncy.get('#page-home main h1').should('have.text', 'Seja um parceiro entregador pela Buger Eats');",
               "err": {},
-              "uuid": "48f809d4-0abd-4c9b-a26d-9f97471499cb",
-              "parentUUID": "a4dae8e6-c264-4288-976f-90433e048f0d",
+              "uuid": "8bd16393-0704-41a8-99ec-4f0f472df43e",
+              "parentUUID": "924cc805-41cd-4708-bef0-a70caa06ac05",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "48f809d4-0abd-4c9b-a26d-9f97471499cb"
+            "8bd16393-0704-41a8-99ec-4f0f472df43e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7239,
+          "duration": 7055,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
