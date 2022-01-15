@@ -29,8 +29,7 @@ jobs:
     - name: Run Web Tests
       run: npm run headless
       continue-on-error: true
-    - run: npm run report:merge   
-    - run: npm run report:generate
+    - run: npm run report:merge
    # Relatorio
     - name: Upload WEB Tests Results
       uses: actions/upload-artifact@v2.3.1
