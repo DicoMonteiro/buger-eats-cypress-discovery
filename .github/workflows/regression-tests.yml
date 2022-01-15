@@ -25,3 +25,12 @@ jobs:
     - name: Run Web Tests
       run: npm run headless
       continue-on-error: true
+    - run: npm run report:merge    
+    - run: npm run report:mocha
+      # Relatorio
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+        BRANCH: gh_pages
+        FOLDER: mochawesome-report
