@@ -31,10 +31,16 @@ jobs:
       continue-on-error: true
     - run: npm run report:merge   
     - run: npm run report:generate
-      # Relatorio
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+    # Relatorio
+    - name: Upload WEB Tests Results
+      uses: actions/upload-artifact@v2.3.1
+      if: always()
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
-        BRANCH: gh_pages
-        FOLDER: mochawesome-report
+        name: web-reports
+        path: cypress/report
+    - name: Test Reporter
+      uses: dorny/test-reporter@v1.5.0
+      with:
+        name: WEB Tests Results
+        path: cypress/report/output.xml
+        reporter: java-junit
