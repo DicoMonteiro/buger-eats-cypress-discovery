@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open",
-    "headless": "npx cypress run",
     "headless-chrome": "npx cypress run -b chrome",
     "headless-edge": "npx cypress run -b edge",
-    "report:cleanup": "rm -fr cypress/report/",
-    "video:cleanup": "rm -fr cypress/videos/",
-    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.xml"
+    "cy:run": "npx cypress run",
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:clean": "rimraf mochawesome-report index.json"
   },
   "author": "Adriano Almeida",
   "license": "MIT",
@@ -25,6 +25,5 @@
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.0.1",
     "rimraf": "^3.0.2"
-  },
-  "dependencies": {}
+  }
 }
