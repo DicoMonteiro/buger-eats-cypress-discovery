@@ -14,32 +14,25 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - uses: actions/checkout@v2
     - name: Install depencies
       run: npm install
-    - name: Clean Report
-      run: |
-        npm run report:cleanup
-        npm run video:cleanup
     - name: Run Web Tests
-      run: npm run headless
+      run: npm run cy:run
       continue-on-error: true
-    - run: npm run report:merge
+    - name: Generate Report
+      run: |
+        npm run report:merge
+        npm run report:mocha
    # Relatorio
-    - name: Upload WEB Tests Results
-      uses: actions/upload-artifact@v2.3.1
-      if: always()
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        name: web-reports
-        path: cypress/report
-    - name: Test Reporter
-      uses: dorny/test-reporter@v1.5.0
-      with:
-        name: WEB Tests Results
-        path: cypress/report/output.xml
-        reporter: java-junit
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+        BRANCH: gh_pages
+        FOLDER: mochawesome-report
